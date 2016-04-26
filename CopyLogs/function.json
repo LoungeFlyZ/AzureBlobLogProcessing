@@ -1,0 +1,25 @@
+{
+  "bindings": [
+    {
+      "schedule": "0 */30 * * * *",
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in"
+    },
+    {
+      "name": "inputBlob",
+      "type": "blob",
+      "path": "cloudshowlogs/blobcopy/syncpoint.txt",
+      "connection": "mscloudshowassets2_STORAGE",
+      "direction": "in"
+    },
+    {
+      "name": "outputBlob",
+      "type": "blob",
+      "path": "cloudshowlogs/blobcopy/syncpoint.txt",
+      "connection": "mscloudshowassets2_STORAGE",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
